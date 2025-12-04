@@ -1,0 +1,9 @@
+menciptakan animasi perulangan visual di konsol (terminal) yang menampilkan garis-garis karakter (-, *, dll.) yang panjangnya berubah secara berulang.
+Struktur Dasar (Loop Utama): Program berjalan dalam loop tak terbatas (while True) hingga dihentikan secara manual oleh pengguna (biasanya dengan menekan Ctrl+C), yang kemudian ditangani oleh blok try...except KeyboardInterrupt.
+Visualisasi Pola: Inti dari kode ini adalah dua loop for yang menciptakan pola naik dan turun:
+Loop Naik: Panjang garis meningkat, menggunakan rumus kuadrat dari iterator ($i \times i$).
+Loop Turun: Panjang garis menurun.Pengaturan Waktu: Fungsi time.sleep(delay) digunakan untuk memberikan jeda antar-cetakan, menciptakan efek animasi visual.
+Keluar Program: Blok except KeyboardInterrupt menangkap upaya pengguna untuk menghentikan program dan menggunakan sys.exit() untuk mengakhiri eksekusi dengan rapi.
+Dua fitur baru ditambahkan untuk memberikan fleksibilitas dan variasi visual pada animasi:
+1. ⚙️ Variasi Konfigurasi (Karakter & Kecepatan)Fitur ini memungkinkan pengguna untuk menyesuaikan elemen visual dan tempo animasi sebelum dimulai.Karakter Kustom: Pengguna dapat memilih karakter apa pun (misalnya *, #, atau @) untuk menggambar pola, menggantikan karakter default -.Kecepatan Kustom (Delay): Pengguna dapat menentukan durasi jeda (delay) antar-baris, mengontrol kecepatan animasi menjadi lebih cepat atau lebih lambat.
+2. 🔢 Mode Pola Baru (Fibonacci)Fitur ini menyediakan mode animasi alternatif selain pola kuadrat standar.Mode A (Kuadrat): Menggunakan pola asli di mana panjang garis adalah $i^2$.Mode B (Fibonacci): Menghasilkan pola visual di mana panjang garis ditentukan oleh deret bilangan Fibonacci ($1, 1, 2, 3, 5, 8, \dots$), menciptakan ritme peningkatan panjang yang berbeda dan tidak secepat pola kuadrat.
